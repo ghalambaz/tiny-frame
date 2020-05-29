@@ -1,4 +1,4 @@
-# Chip Small Framework 
+# Tiny Small Framework 
 A small framework with **FileBase** configuration 
 
 I could wrote a Router and Adding Template engine to it,
@@ -68,7 +68,7 @@ Running with PHP
 
     $php -S localhost:8080 -t public/
     
-####Apache
+#### Apache
 Running With Apache
 	add .htaccess file to your root folder and make sure mode_rewrite is enabled
 
@@ -81,7 +81,7 @@ Running With Apache
     RewriteRule ^.*$ public/index.php [NC,L]
     Options -Indexes	
 
-####Nginx
+#### Nginx
 Running With Nginx
 Nginx config
 
@@ -96,7 +96,7 @@ Nginx config
         }
     }
 
-####Docker
+#### Docker
 Running With Dockerfile
 
     tar xf dockrized.tar.xz
