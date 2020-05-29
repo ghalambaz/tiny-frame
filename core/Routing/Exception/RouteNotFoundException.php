@@ -4,7 +4,14 @@ declare(strict_types=1);
 namespace Core\Routing\Exception;
 
 
-class RouteNotFoundException
+use Exception;
+
+/**
+ * Class RouteNotFoundException
+ * @package Core\Routing\Exception
+ * @author Ali Ghalambaz
+ */
+class RouteNotFoundException extends Exception
 {
 
 }

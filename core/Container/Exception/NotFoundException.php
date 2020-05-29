@@ -1,14 +1,18 @@
 <?php
-/*
- * Developer: Ali Ghalambaz <aghalambaz[at]gmail[dot]com>
- * Date: 15.May.2020
- * Time: 10:33 AM
- */
+declare(strict_types=1);
 
 namespace Core\Container\Exception;
 
 
-class NotFoundException
+use Exception;
+use Psr\Container\NotFoundExceptionInterface;
+
+/**
+ * Class NotFoundException
+ * @package Core\Container\Exception
+ * @author Ali Ghalambaz
+ */
+class NotFoundException extends Exception implements NotFoundExceptionInterface
 {
 
 }

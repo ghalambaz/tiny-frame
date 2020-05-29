@@ -1,12 +1,18 @@
 <?php
 declare(strict_types=1);
 
-namespace Core\Routing\Interface;
+namespace Core\Routing\Interfaces;
 
 
-use Core\Routing\RouteCollectionInterface;
-
+/**
+ * Interface RouteCollectionBuilderInterface
+ * @package Core\Routing\Interfaces
+ */
 interface RouteCollectionBuilderInterface
 {
-    public function build():RouteCollectionInterface;
+    /**
+     * @param array $routeData
+     * @return RouteCollectionInterface
+     */
+    public function build(array $routeData): RouteCollectionInterface;
 }

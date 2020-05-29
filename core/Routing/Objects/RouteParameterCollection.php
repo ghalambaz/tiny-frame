@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Core\Routing;
+namespace Core\Routing\Objects;
 
 
 use Core\Routing\Interfaces\RouteParameterCollectionInterface;

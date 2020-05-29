@@ -1,1 +1,21 @@
+#How to define a route?
+#  route_name
+#    path: /uri_path/{parameter_name:default_value}/{another_parameter_name:default_value}/... (must)
+#    callback: class_namespace:function (must)
+#    parameters : (optional)
+#        parameter_name:
+#             regex: typed_regex (optional)
+#             default: default_value (optional)
+
 routes:
+  blog:
+    path: /blog/{year}/{month}/{day}
+    callback: App\controllers\Blog:page
+    parameters:
+      year:
+        pattern: '\d+'
+      month:
+        pattern: '\w+'
+  default:
+    path: /
+    callback: App\controllers\Main:index

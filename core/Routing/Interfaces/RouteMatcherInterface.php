@@ -1,14 +1,21 @@
 <?php
 declare(strict_types=1);
 
-namespace Core\Routing;
+namespace Core\Routing\Interfaces;
 
 
-use Core\Routing\Interfaces\RouteCollectionInterface;
-use Core\Routing\Interfaces\RouteInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
+/**
+ * Interface RouteMatcherInterface
+ * @package Core\Routing\Interfaces
+ */
 interface RouteMatcherInterface
 {
-    public function matchRequest(ServerRequestInterface $serverRequest,RouteCollectionInterface $routeCollection) : RouteInterface;
+    /**
+     * @param ServerRequestInterface $serverRequest
+     * @param RouteCollectionInterface $routeCollection
+     * @return RouteInterface
+     */
+    public function matchRequest(ServerRequestInterface $serverRequest, RouteCollectionInterface $routeCollection): RouteInterface;
 }

@@ -1,0 +1,11 @@
+routes:
+  blog:
+    path: /blog/{year}/{month}/{day}
+    parameters:
+      year:
+        pattern: '\d+'
+      month:
+        pattern: '\w+'
+  default:
+    path: /
+    callback: App\controllers\Blog:page

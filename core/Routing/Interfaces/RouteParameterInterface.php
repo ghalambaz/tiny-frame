@@ -1,15 +1,56 @@
 <?php
 declare(strict_types=1);
 
-namespace Core\Routing\Interface;
+namespace Core\Routing\Interfaces;
 
 
+/**
+ * Interface RouteParameterInterface
+ * @package Core\Routing\Interfaces
+ */
 interface RouteParameterInterface
 {
-    public function setName(string $name) : RouteParameterInterface ;
-    public function getName() : string ;
-    public function setPattern(string $pattern) : RouteParameterInterface ;
-    public function getPattern() : string ;
-    public function setDefaultValue($defaultValue): RouteParameterInterface;
-    public function getDefaultValue();
+    /**
+     * @param string $name
+     * @return RouteParameterInterface
+     */
+    public function setName(string $name): RouteParameterInterface;
+
+    /**
+     * @return string
+     */
+    public function getName(): string;
+
+    /**
+     * @param string $pattern
+     * @return RouteParameterInterface
+     */
+    public function setPattern(string $pattern): RouteParameterInterface;
+
+    /**
+     * @return string
+     */
+    public function getPattern(): ?string;
+
+    /**
+     * @param string $defaultValue
+     * @return RouteParameterInterface
+     */
+    public function setDefaultValue(string $defaultValue): RouteParameterInterface;
+
+    /**
+     * @return string
+     */
+    public function getDefaultValue(): ?string;
+
+    /**
+     * @param $value
+     * @return RouteParameterInterface
+     */
+    public function setValue($value);
+
+    /**
+     * @return string
+     */
+    public function getValue() : ?string ;
 }

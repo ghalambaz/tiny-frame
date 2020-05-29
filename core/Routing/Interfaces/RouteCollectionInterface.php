@@ -1,14 +1,18 @@
 <?php
 declare(strict_types=1);
 
-namespace Core\Routing;
+namespace Core\Routing\Interfaces;
 
 
 use ArrayAccess;
+use Countable;
+use Iterator;
 
-interface RouteCollectionInterface extends ArrayAccess
+/**
+ * Interface RouteCollectionInterface
+ * @package Core\Routing\Interfaces
+ */
+interface RouteCollectionInterface extends ArrayAccess, Countable, Iterator
 {
-    public function addRoute(string $name,Route $route);
-    public function getRoutes();
 
 }

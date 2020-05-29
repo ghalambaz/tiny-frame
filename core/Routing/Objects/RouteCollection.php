@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Core\Routing;
+namespace Core\Routing\Objects;
 
 
 use Core\Routing\Interfaces\RouteCollectionInterface;
@@ -43,7 +43,7 @@ class RouteCollection implements RouteCollectionInterface
      */
     public function getRoute(string $name)
     {
-        return $this->routes['name'] ?? null;
+        return $this->routes[$name] ?? null;
     }
 
     /**

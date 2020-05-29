@@ -1,14 +1,22 @@
 <?php
-/*
- * Developer: Ali Ghalambaz <aghalambaz[at]gmail[dot]com>
- * Date: 14.May.2020
- * Time: 8:30 PM
- */
+declare(strict_types=1);
 
 namespace App\controllers;
 
+use Core\Kernel\ControllerAbstract;
 
-class Blog
+class Blog extends ControllerAbstract
 {
+    public function page($west = 'w', $day, $year, $month, $east = 'e')
+    {
+        return $this->render('blog/page.html.twig',
+            ['text' => 'Ali',
+                'west' => $west,
+                'year' => $year,
+                'month' => $month,
+                'day' => $day,
+                'east' => $east]
+        );
+    }
 
 }

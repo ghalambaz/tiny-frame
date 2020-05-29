@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Core\Routing;
+namespace Core\Routing\Objects;
 
 
 use Core\Routing\Interfaces\RouteInterface;
@@ -127,6 +127,15 @@ class Route implements RouteInterface
         if(empty($this->parameterCollection[$name]))
             throw new InvalidArgumentException("Parameter {$name} Not Found");
         return $this->parameterCollection[$name];
+    }
+
+    /**
+     * @param string $name
+     * @return bool
+     */
+    public function hasParameter(string $name)
+    {
+        return !empty($this->parameterCollection[$name]);
     }
 
     /**
