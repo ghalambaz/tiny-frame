@@ -63,8 +63,7 @@ your route should be like this
 
 ## How To Run?
 
-####PHP 
-Running with PHP
+#### Running with PHP
 
     $php -S localhost:8080 -t public/
     
