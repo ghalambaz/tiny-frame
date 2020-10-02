@@ -1,4 +1,4 @@
-# Tiny Small Framework 
+# Tiny Framework 
 A small framework with **FileBase** configuration 
 
 I could wrote a Router and Adding Template engine to it,
